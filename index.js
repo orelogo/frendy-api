@@ -16,6 +16,7 @@ const vpiPreferencesRoutes = require('./routes/vpi_preferences');
 const sessionRoutes = require('./routes/session');
 const debateSignUpRoutes = require('./routes/debate_sign_up');
 const startRoomSorterRoutes = require('./routes/start_room_sorter');
+const getPlaces = require('./routes/get_places');
 
 app.use(knexLogger(knex));
 app.use(bodyParser.json());
@@ -28,6 +29,7 @@ app.use('/api/vpi_preferences', vpiPreferencesRoutes(knex, auth));
 app.use('/api/debate_sign_up', debateSignUpRoutes(knex));
 app.use('/api/start_room_sorter', startRoomSorterRoutes(knex, auth));
 app.use('/api/session', sessionRoutes(knex, jwt));
+app.use('/api/routes/get_places', getPlaces())
 
 app.listen(PORT, () => {
   console.log('Example app listening on port ' + PORT);

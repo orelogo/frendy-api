@@ -2,8 +2,8 @@
 module.exports = {
 
   development: {
-    client: 'postgresql',
-    connection: { host: 'localhost', database: 'breakpath' },
+    client: 'mysql',
+    connection: { host: 'localhost', database: 'frendy' },
     migrations: {
       directory: './database/migrations',
     },
@@ -13,8 +13,8 @@ module.exports = {
   },
 
   test: {
-    client: 'postgresql',
-    connection: { host: 'localhost', database: 'breakpathtest' },
+    client: 'mysql',
+    connection: { host: 'localhost', database: 'fendytest' },
     migrations: {
       directory: './database/migrations',
     },
@@ -28,7 +28,7 @@ module.exports = {
   },
 
   staging: {
-    client: 'postgresql',
+    client: 'mysql',
     connection: {
       database: 'my_db',
       user: 'username',
@@ -44,7 +44,7 @@ module.exports = {
   },
 
   production: {
-    client: 'postgresql',
+    client: 'mysql',
     connection: process.env.DATABASE_URL || process.env.PG_CONNECTION_STRING,
     pool: {
       min: 2,
