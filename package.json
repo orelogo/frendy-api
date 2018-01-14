@@ -1,0 +1,32 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "jsonwebtoken": "^8.0.1",
+    "jwt-simple": "^0.5.1",
+    "knex": "^0.13.0",
+    "knex-logger": "^0.1.0",
+    "moment": "^2.18.1",
+    "passport": "^0.4.0",
+    "passport-jwt": "^3.0.0",
+    "pg": "^7.2.0",
+    "string-hash": "^1.1.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "engines": {
+    "node": "8.4.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
